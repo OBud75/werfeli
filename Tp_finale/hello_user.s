@@ -13,16 +13,16 @@ newline:
 .globl _start
 _start:
     # Afficher le message de demande
-    mov $4, %eax          # syscall: write
-    mov $1, %ebx          # fd: stdout
+    mov $4, %eax
+    mov $1, %ebx
     mov $prompt, %ecx     # adresse du message
     mov $17, %edx         # longueur du message
     int $0x80
 
     # Lire l'entrée utilisateur
-    mov $3, %eax          # syscall: read
-    mov $0, %ebx          # fd: stdin
-    mov $name, %ecx       # buffer pour l'entrée
+    mov $3, %eax
+    mov $0, %ebx
+    mov $name, %ecx
     mov $32, %edx         # taille maximum
     int $0x80
 
@@ -37,15 +37,15 @@ clean_input:
 skip_clean:
 
     # Afficher "Bonjour, "
-    mov $4, %eax          # syscall: write
-    mov $1, %ebx          # fd: stdout
+    mov $4, %eax
+    mov $1, %ebx
     mov $greeting, %ecx   # adresse du message
-    mov $9, %edx          # longueur du message
+    mov $9, %edx
     int $0x80
 
     # Afficher le nom
-    mov $4, %eax          # syscall: write
-    mov $1, %ebx          # fd: stdout
+    mov $4, %eax
+    mov $1, %ebx
     mov $name, %ecx       # adresse du nom
     mov $32, %edx         # longueur maximale
     int $0x80
@@ -58,6 +58,6 @@ skip_clean:
     int $0x80
 
     # Quitter le programme
-    mov $1, %eax          # syscall: exit
-    xor %ebx, %ebx        # code de sortie : 0
+    mov $1, %eax
+    xor %ebx, %ebx
     int $0x80
