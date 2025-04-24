@@ -141,3 +141,9 @@ def main():
 # Point d'entrée du script
 if __name__ == '__main__':
     main()
+
+
+# Evitez de commenter chaque ligne, le code doit être clair de lui même
+# Concentrez vous sur la documentation des fonctions (avec les docstrings
+# comme vous l'avez fait) afin d'expliquer comment se servir de la fonction et non
+# ce qu'elle fait (ce qui doit être le plus évident possible dans le code en lui même)

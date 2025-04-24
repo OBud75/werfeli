@@ -45,3 +45,6 @@ _start:
   mov rax, 60
   xor rdi, rdi                ; Code de sortie 0
   syscall
+
+; D'une manière générale, on préfèrera diviser le programme en fonctions (exit, read_input, write ...)
+; Cela clarifie le code, le rend plus "humain" et évite d'avoie à faire à des commentaire
